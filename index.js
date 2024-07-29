@@ -48,7 +48,6 @@ app.get('/api/persons/:id', (request, response, next) => {
             if (person) {
                 response.json(person)
             } else {
-                console.log('bingud')
                 response.status(404).end()
             }
         })
@@ -72,7 +71,6 @@ app.put('/api/persons/:id', (request, response, next) => {
             response.json(oldPerson)
         })
         .catch(error => {
-            console.log('bingus')
             next(error)
         })
 
